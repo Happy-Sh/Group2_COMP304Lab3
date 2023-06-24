@@ -4,4 +4,13 @@
     <string name="t_exercise1">\t\tExercise1</string>
     <string name="t_exercise2">\t\tExercise2</string>
     <string name="t_exercise3">\t\tExercise3</string>
+    <string name="clear_canvas">CLEAR CANVAS</string>
+    <string-array name="lineThickness">
+        <item>20</item>
+        <item>40</item>
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+    </string-array>
+
 </resources>

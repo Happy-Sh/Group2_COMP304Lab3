@@ -2,8 +2,175 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Exercise1">
 
+
+    <TextView
+        android:id="@+id/thicknessTextView"
+        android:layout_width="134dp"
+        android:layout_height="28dp"
+        android:text="Line Thickness"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lnColorTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lnColorTextView"
+        android:layout_width="95dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="20dp"
+        android:text="Line Color"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/thicknessTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/arrowKeyTextView"
+        android:layout_width="94dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:text="Arrow Keys"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lnColorTextView"
+        app:layout_constraintStart_toEndOf="@+id/lnColorTextView" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="103dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
+
+    <RadioGroup
+        android:id="@+id/radioGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/red"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:buttonTint="#FFFFFF"
+            android:text="Red"
+            android:textColor="#000000" />
+
+        <RadioButton
+            android:id="@+id/yellow"
+            android:layout_width="79dp"
+            android:layout_height="48dp"
+            android:text="Yellow" />
+
+        <RadioButton
+            android:id="@+id/cyan"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Cyan" />
+
+
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/ltBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="70dp"
+        android:onClick="btnLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/left_arrow" />
+
+    <ImageButton
+        android:id="@+id/upBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="24dp"
+        android:onClick="btnUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/up_arrow" />
+
+    <ImageButton
+        android:id="@+id/downBtn"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="296dp"
+        android:layout_marginTop="116dp"
+        android:onClick="btnDown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/down_arrow" />
+
+    <ImageButton
+        android:id="@+id/rtBtn"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="70dp"
+        android:onClick="btnRight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/right_arrow" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="157dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="240dp"
+        android:backgroundTint="#A89E9E"
+        android:onClick="clearCanvas"
+        android:text="@string/clear_canvas"
+        android:textColor="#212121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ImageViewForDrawing"
+        android:layout_width="370dp"
+        android:layout_height="312dp"
+        android:layout_margin="20px"
+        android:background="@color/grey"
+        android:minWidth="300px"
+        android:minHeight="300px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.757"></ImageView>
+
+    <TextView
+        android:id="@+id/yTextView"
+        android:layout_width="69dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="248dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/clearButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/colorTextView"
+        android:layout_width="81dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="248dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toEndOf="@+id/yTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
