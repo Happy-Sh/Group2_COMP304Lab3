@@ -5,6 +5,12 @@
     <string name="t_exercise2">\t\tExercise2</string>
     <string name="t_exercise3">\t\tExercise3</string>
     <string name="clear_canvas">CLEAR CANVAS</string>
+    <string name="line_thickness">Line Thickness</string>
+    <string name="line_color">Line Color</string>
+    <string name="arrow_keys">Arrow Keys</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+    <string name="cyan">Cyan</string>
     <string-array name="lineThickness">
         <item>20</item>
         <item>40</item>

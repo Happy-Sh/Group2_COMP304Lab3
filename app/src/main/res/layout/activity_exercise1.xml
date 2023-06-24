@@ -12,30 +12,33 @@
         android:id="@+id/thicknessTextView"
         android:layout_width="134dp"
         android:layout_height="28dp"
-        android:text="Line Thickness"
+        android:text="@string/line_thickness"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/lnColorTextView"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/lnColorTextView"
         android:layout_width="95dp"
         android:layout_height="27dp"
         android:layout_marginStart="20dp"
-        android:text="Line Color"
+        android:text="@string/line_color"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/thicknessTextView"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/arrowKeyTextView"
         android:layout_width="94dp"
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
-        android:text="Arrow Keys"
+        android:text="@string/arrow_keys"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/lnColorTextView"
-        app:layout_constraintStart_toEndOf="@+id/lnColorTextView" />
+        app:layout_constraintStart_toEndOf="@+id/lnColorTextView"
+        tools:ignore="TextSizeCheck" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -62,20 +65,20 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:buttonTint="#FFFFFF"
-            android:text="Red"
+            android:text="@string/red"
             android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/yellow"
             android:layout_width="79dp"
             android:layout_height="48dp"
-            android:text="Yellow" />
+            android:text="@string/yellow" />
 
         <RadioButton
             android:id="@+id/cyan"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="Cyan" />
+            android:text="@string/cyan" />
 
 
     </RadioGroup>
@@ -115,8 +118,8 @@
 
     <ImageButton
         android:id="@+id/rtBtn"
-        android:layout_width="44dp"
-        android:layout_height="41dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="340dp"
         android:layout_marginTop="70dp"
         android:onClick="btnRight"
@@ -149,7 +152,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.757"></ImageView>
+        app:layout_constraintVertical_bias="0.757" />
 
     <TextView
         android:id="@+id/yTextView"

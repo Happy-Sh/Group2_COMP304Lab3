@@ -138,10 +138,11 @@ class Exercise1 : AppCompatActivity() {
         imageView.invalidate()
     }
 
-    fun drawLine() {
+
+    private fun drawLine() {
         paint.color = colorValue
         paint.strokeWidth = dropdown.selectedItem.toString().toInt().toFloat()
-        textView.text = "Y = " + endY
+        textView.text = "Y = $endY"
         canvas.drawLine(
             beginX.toFloat(),
             beginY.toFloat(),
