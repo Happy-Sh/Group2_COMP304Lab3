@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         ex3.setOnClickListener{
-            val intent = Intent(this,Exercise2 ::class.java)
+            val intent = Intent(this,Exercise3 ::class.java)
             startActivity(intent)
         }
     }
